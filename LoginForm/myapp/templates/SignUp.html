@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SignUp Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        #outerBox{
+            border:1px solid gray;
+            margin-Left:33%;
+            margin-Top:5%;
+            padding:35px;
+            width:30%;
+            text-Align:center;                
+        }
+        .innerLines{
+            margin:10px;
+            font:medium;
+            padding:5px;
+        }
+        #head{
+            padding:5px;
+            text-align:right;
+        }
+        #head button{
+            padding:5px;
+            font:large;
+        }
+        #head a{
+            text-decoration :none;
+        }
+       
+    </style>
+    <body>
+        <header id='head'>
+            <button><a href='/login'>SignIn</a></button>
+        </header>
+        <div id="outerBox">
+            <h1>Registration Form</h1><hr>
+            <form method='POST'>
+            {% csrf_token %}
+                <lable for="UserName" class="innerLines">Name : </lable>&emsp;&emsp;&emsp;&emsp;&emsp;
+                <input id="UserName" name="UserName" class="innerLines" required='true'><br>
+                <lable for="Email" class="innerLines">Email : </lable>&emsp;&emsp;&emsp;&emsp;&emsp;
+                <input id="Email" name="Email" class="innerLines" required='true'><br>
+                <lable for="Password" class="innerLines">Password :</lable>&emsp;&emsp;&emsp;&ensp;&nbsp;
+                <input id="Password" name="Password" class="innerLines" required='true'><br>
+                <lable for="CPassword" class="innerLines">Conform Password :</lable>
+                <input id="CPassword" name="CPassword" class="innerLines" required='true'><br>
+                <button class="innerLines">Submit</button>
+            </form><hr>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+           
+            #outerBox{
+                border:1px solid gray;
+                margin-Left:33%;
+                margin-Top:10%;
+                padding:35px;
+                width:30%;
+                text-Align:center;                
+            }
+            .innerLines{
+                margin:10px;
+                font:medium;
+                padding:5px;
+            }
+            #head{
+                padding:5px;
+                text-align:right;
+            }
+            #head button{
+                padding:5px;
+                font:large;
+            }
+            #head a{
+                text-decoration :none;
+            }
+           
+
+        </style>    
+    </head>
+    <body>
+        <header id='head'>
+            <button><a href='/'>Signup</a></button>
+        </header>
+        <div id="outerBox">
+            <h1>Login Form</h1><hr>
+            <form id="formBox" method='POST'>
+                {% csrf_token %}
+                <label for="userid" class="innerLines" > User ID : </label>&nbsp
+                <input id="userid" name="userid" class="innerLines" required='true'><br>
+                <label for="password" class="innerLines">Password : </label>
+                <input id="password" name="password" class="innerLines" required='true'><br>
+                <button id="submitBtn" class="innerLines">Submit</button>
+            </form><hr>
+        </div>       
+    </body>
+</html>
